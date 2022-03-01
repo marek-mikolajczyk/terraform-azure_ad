@@ -6,15 +6,15 @@ terraform {
     }
   }
 
-backend "local" {}
-/*
+# backend "local" {}
+
   cloud {
     organization = "example-org-e95f05"
     workspaces {
-      name = "terraform-docker_containers"
+      name = "terraform-azure_ad"
     }
   }
-*/
+
   required_version = ">= 0.13, <= 2.0"
 
 }
