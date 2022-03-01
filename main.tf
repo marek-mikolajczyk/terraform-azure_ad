@@ -14,7 +14,7 @@ resource "azuread_user" "tf_user_guests" {
 
 
 resource "azuread_user" "tf_user_auditors" {
-  count = 3
+  count = 2
   user_principal_name = "tf_auditor${count.index}@${data.azuread_domains.azure_domain.domains.0.domain_name}"
   display_name        = "tf_auditor${count.index}"
   password            = var.DEFAULT_AAD_PASSWORD
